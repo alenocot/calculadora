@@ -57,20 +57,25 @@
                         <div class="row mb-4 d-flex justify-content-center">
                             
                             <!-- Valor por hora -->
-                            <div class="col-md-6">
+                            <div class="col-md-7">
                                 <div class="form-outline mb-4">
-                                    <input type="number" id="valorPorHora"
-                                        step="0.25" required="required"
-                                        class="form-control" />
-                                    <label class="form-label" for="valorPorHora">Valor
-                                        por hora ($)</label>
+                                    <input type="numeric" pattern="(^[0-9]+$)|(^-?\d*(\.\d+)?$)" id="valorPorHora" required="required" class="form-control" />
+                                    <label class="form-label" for="valorPorHora">Valores numericos</label>
                                 </div>
                             </div>
+
+                            <div class="col-md-6">
+                                <div class="form-outline mb-4">
+                                    <input type="numeric" id="operacion" required="required" class="form-control" disabled/>
+                                    <label class="form-label" for="valorPorHora"></label>
+                                </div>
+                            </div>
+
                         </div>
 
                         <div class="row mb-4 d-flex justify-content-center">
                             
-                            <!-- Elemento 1: Diseño de interfaz -->
+                            <!-- Elemento 1: Diseño de interfaz 
                             <div class="col-md-6">
                                 <div class="form-outline mb-4">
                                     <input type="number" id="interfazHoras"
@@ -80,7 +85,7 @@
                                 </div>
                             </div>
                             
-                            <!-- Elemento 2: Testing -->
+                            Elemento 2: Testing 
                             <div class="col-md-6">
                                 <div class="form-outline mb-4">
                                     <input type="number" id="testingHoras"
@@ -89,7 +94,7 @@
                                 </div>
                             </div>
                             
-                            <!-- Elemento 3: Correcciones de errores -->
+                            Elemento 3: Correcciones de errores 
                             <div class="col-md-6">
                                 <div class="form-outline mb-4">
                                     <input type="number" id="correccionesHoras"
@@ -97,14 +102,46 @@
                                     <label class="form-label" for="correccionesHoras">Correciones (horas)</label>
                                 </div>
                             </div>
-                            
+                            -->
                         </div>
 
                         <!-- Submit button -->
+                 
+                        <div class="row mb-4 d-flex justify-content-center">
+                            <div class="col-md-4">
+                                <button id="mas" type="click"
+                                    class="btn btn-primary btn-block">+</button>
+                            </div>
+                        </div>
+                        <div class="row mb-4 d-flex justify-content-center">
+                            <div class="col-md-4">
+                                <button id = "menos" type="click"
+                                    class="btn btn-primary btn-block">-</button>
+                            </div>
+                        </div>
+                        <div class="row mb-4 d-flex justify-content-center">
+                            <div class="col-md-4">
+                                <button type="click" id = "por"
+                                    class="btn btn-primary btn-block">*</button>
+                            </div>
+                        </div>
+                        <div class="row mb-4 d-flex justify-content-center">
+                            <div class="col-md-4">
+                                <button id="divi" type="click"
+                                    class="btn btn-primary btn-block">/</button>
+                            </div>
+                        </div>
                         <div class="row mb-4 d-flex justify-content-center">
                             <div class="col-md-6">
-                                <button type="submit"
+                                <button type="submit" id = "calcular"
                                     class="btn btn-primary btn-block">Calcular</button>
+                            </div>
+                        </div>
+
+                        <div class="row mb-4 d-flex justify-content-center">
+                            <div class="col-md-6">
+                                <button type="click" id = "limpiar"
+                                    class="btn btn-primary btn-block">Limpiar</button>
                             </div>
                         </div>
 
@@ -119,10 +156,10 @@
                                     disabled />
                             </div>
                         </div>
-
+                    </div>s
                     </form>
                 </div>
-            </div>
+           
         </div>
         <!-- MDB -->
         <script
